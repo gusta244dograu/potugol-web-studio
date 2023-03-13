@@ -1,0 +1,63 @@
+programa {
+
+  inclua biblioteca Util
+
+  funcao inicio(){
+
+    cadeia opcao, nome_cliente
+    inteiro idade
+
+    limpa()
+    escreva(".ᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗ.\n")
+    escreva(".|            SISTEMA DE CADASTRO           |.\n")
+    escreva(".ᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖ.\n\n")
+
+    escreva(" 1-Cadastrar novo cliente\n")
+    escreva(" 2-Visualizar clientes cadastrados\n")
+    escreva(" 3-Sair do sistema\n")
+    escreva(".	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ\n")
+    escreva("Opção desejada: ")
+    leia (opcao)
+
+  escolha(opcao)
+  { 
+      caso"1":
+      {
+         limpa()
+         escreva("Informe o nome do cliente:\n")
+         leia(nome_cliente)
+
+
+         limpa()
+         escreva("Qual a idade do(a) cliente ", nome_cliente, ":")
+         leia(idade)
+
+         limpa()
+         //Exibe mensagem de usuario cadastradocom sucesso
+         escreva("Usuário cadastrado com sucesso!")
+         Util.aguarde(3000)
+
+         //relatorio para o menu inicio
+         inicio() 
+         pare
+      }
+
+      caso"2"
+      {
+        limpa
+          limpa()
+          escreva(".ᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗ.\n")
+          escreva(".|            SISTEMA DE CADASTRO           |.\n")
+          escreva(".ᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖ.\n\n")
+
+          escreva("Nº 01 - ", nome_cliente, ",-idade:"idade,"\n")
+
+          escreva(".	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ\n")
+          Util.aguarde(5000) // aguarde 05 segundos
+          inicio()
+        pare
+      
+
+
+  }
+}
