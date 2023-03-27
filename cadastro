@@ -2,16 +2,16 @@ programa {
 
     inclua biblioteca Util
 
-    cadeia opcao, nome_cliente
-    inteiro idade
+    cadeia opcao, nome_cliente[8],
+    inteiro idade[8] qunt = 0, n
 
 
   funcao inicio(){
 
     limpa()
-    escreva(".ᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗᗗ.\n")
-    escreva(".|            SISTEMA DE CADASTRO           |.\n")
-    escreva(".ᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖᗖ.\n\n")
+    escreva(".============================================.\n")
+    escreva(".|            GUSTA REGISTROS               |.\n")
+    escreva(".==========================================.\n\n")
 
     escreva(" 1-Cadastrar novo cliente\n")
     escreva(" 2-Visualizar clientes cadastrados\n")
@@ -26,14 +26,14 @@ programa {
       {
          limpa()
          escreva("Informe o nome do cliente:\n")
-         leia(nome_cliente)
+         leia(nome_completo[quant])
 
 
          limpa()
          //Exibe mensagem do usuario cadastrado com sucesso
-         escreva("Qual a idade do(a) cliente ", nome_cliente, ":\n")
-         leia(idade)
-
+         escreva("Qual a idade do(a) cliente ", nome_completo[quant], ":\n")
+         leia(idade[quant])
+        quant++
          limpa()
          escreva("Usuário cadastrado com sucesso!")
          Util.aguarde(3000)
@@ -55,41 +55,41 @@ programa {
 
            escreva("Nº -", nome_cliente, "- idade: ", idade, "\n")
 
-          escreva(".	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ	ᚓ\n")
+          escreva(".	🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰🔰\n")
           Util.aguarde(5000) // Aguarda 05 Segundos
           inicio()
        pare
 
       }
 
-       caso"3"
-       {
+      caso "3":
+      {
         limpa()
-        escreva("saindo do sistema em 05 segundos. . . ")
+        escreva("Saindo do sistema em 05 segundos . . . ")
         Util.aguarde(1000)
 
         limpa()
-        escreva("saindo do sistema em 04 segundos. . . ")
-        Util.aguarde(1000)
-
-        limpa()
-        escreva("saindo do sistema em 03 segundos. . . ")
-        Util.aguarde(1000)
-
-        limpa()
-        escreva("saindo do sistema em 02 segundos. . . ")
-        Util.aguarde(1000)
-
-        limpa()
-        escreva("saindo do sistema em 01 segundos. . . ")
+        escreva("Saindo do sistema em 04 segundos . . . ")
         Util.aguarde(1000)
         
         limpa()
-        escreva("Até a proxima!!! \n\n\n")
+        escreva("Saindo do sistema em 03 segundos . . . ")
+        Util.aguarde(1000)
 
+        limpa()
+        escreva("Saindo do sistema em 02 segundos . . . ")
+        Util.aguarde(1000)
 
+        limpa()
+        escreva("Saindo do sistema em 01 segundos . . . ")
+        Util.aguarde(1000)
+
+        limpa()
+        escreva("Até a proxima!! \n\n\n")
         pare
-       }
+      }
+
+
 
   }
 
