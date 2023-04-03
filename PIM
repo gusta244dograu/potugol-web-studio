@@ -1,5 +1,6 @@
 programa 
 {
+    inclua biblioteca Util
 
     inteiro num, n, contador = 0 
 
@@ -22,7 +23,9 @@ programa
               {
                 escreva(n, ".")
               }
+
               contador++
         }
+        Util.aguarde(1000)
     }
 }
