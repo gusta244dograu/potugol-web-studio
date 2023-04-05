@@ -2,7 +2,7 @@ programa {
 
   inclua biblioteca Util
 
-    cadeia opcao, nome_cliente[8]
+    cadeia opcao, nome_cliente[8], pesquisa
     inteiro idade[8], quant = 0, n 
 
     funcao inicio() {
@@ -15,7 +15,8 @@ programa {
 
     escreva(" 1 - Cadastar novo cliente\n")
     escreva(" 2 - Visualizar cliente cadastrados\n")
-    escreva(" 3 - Sair do sistema\n")
+    escreva(" 3 - Buscar usuário cadastrado\n")
+    escreva(" 4 - Sair do sistema\n")
 
     escreva(".**************************************************************************************.\n")
     escreva("Opção desejada: ")
@@ -40,7 +41,7 @@ programa {
 
             //Exibe mensagem de usuário cadastrado com sucesso
             escreva("AVISO: Usuário cadastrado com sucesso!")
-            Util.aguarde(3000)
+            Util.aguarde(1000)
 
             //Retorna para o menu inicio
             inicio()
@@ -69,6 +70,15 @@ programa {
         caso "3":
         {
               limpa()
+              escreva("Informe o nome a ser buscado:", "\n")
+              leia()
+              pare
+        }
+
+
+        caso "4":
+        {
+              limpa()
               escreva("Saindo do sistema em 05 segundos...")
               Util.aguarde(1000)
 
@@ -92,6 +102,7 @@ programa {
               escreva("Até a próxima!!! \n\n\n")
 
               pare
+
 
 
         }
